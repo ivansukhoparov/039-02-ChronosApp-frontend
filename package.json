@@ -1,0 +1,9 @@
+{
+  "name": "039-02-ChatterChrono-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ivansukhoparov/039-02-ChatterChrono-frontend.git",
+  "author": "ivansukhoparov <rbcdaaa@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}
