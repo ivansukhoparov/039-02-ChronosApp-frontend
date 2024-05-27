@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body id="content-area">
+
+<template id="error-template">
+    <div class="error">
+        <h3 class="error__header"> error   </h3>
+        <div class="error__messages-area">
+            <p class="error__message">Something wrong in that field </p>
+        </div>
+        <button class="error__button close-button"> Ok</button>
+    </div>
+</template>
+
+<template id="login-form-template">
+<div class="login">
+    <form class="login__form login-form">
+        <label for="login-ot-email"  class="login-form__label">Login or e-mail:</label>
+        <input type="text"  class="login-form__input"  id="login-ot-email" name="login-ot-email">
+
+        <label for="password"  class="login-form__label">Password:</label>
+        <input type="text" class=" login-form__input"  id="password" name="password">
+
+        <button class="button  login-form__submit" id="login-submit">Login</button>
+    </form>
+</div>
+</template>
+</body>
+<script src="index.js" type="module"></script>
+</html>
