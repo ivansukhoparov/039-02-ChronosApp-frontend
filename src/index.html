@@ -13,6 +13,10 @@
 
 </div>
 
+<div class="form-area" id="form-area">
+
+</div>
+
 <template id="start-screen-template">
     <div class="start-screen">
         <div>
@@ -51,12 +55,12 @@
         </div>
         <form class="login__form login-form">
             <label for="login-ot-email" class="login-form__label">Login or e-mail:</label>
-            <input type="text" class="login-form__input" id="login-ot-email" name="login-ot-email">
+            <input type="text" class="login-form__input" id="login-ot-email" name="loginOrEmail">
 
             <label for="password" class="login-form__label">Password:</label>
             <input type="text" class=" login-form__input" id="password" name="password">
 
-            <button class="button  login-form__submit" id="login-submit">Login</button>
+            <button class="button submit-button login-form__submit" id="login-submit">Login</button>
         </form>
     </div>
 </template>
@@ -69,16 +73,16 @@
         </div>
         <form class="registration__form registration-form">
             <label for="registration-login" class="registration-form__label">registration or e-mail:</label>
-            <input type="text" class="registration-form__input" id="registration-login" name="registration-login">
+            <input type="text" class="registration-form__input" id="registration-login" name="login">
 
             <label for="registration-email" class="registration-form__label">registration or e-mail:</label>
-            <input type="text" class="registration-form__input" id="registration-email" name="registration-email">
+            <input type="text" class="registration-form__input" id="registration-email" name="email">
 
             <label for="registration-password" class="registration-form__label">Password:</label>
             <input type="text" class=" registration-form__input" id="registration-password"
-                   name="registration-password">
+                   name="password" >
 
-            <button class="button  registration-form__submit" id="registration-submit">registration</button>
+            <button class="button  submit-button registration-form__submit" id="registration-submit">registration</button>
         </form>
     </div>
 </template>
@@ -154,7 +158,7 @@
 
         <form class="new-task__form task-form">
             <label for="company-name" class="task-form__label">Company Name:</label>
-            <input type="text" class="task-form__input" list="company-names" id="company-name" name="company-name">
+            <input type="text" class="task-form__input" list="company-names" id="company-name" name="companyName">
             <datalist id="company-names">
                 <option value="Company 1">
                 <option value="Company 2">
@@ -162,20 +166,20 @@
             </datalist>
 
             <label for="project-name" class="task-form__label">Project Name:</label>
-            <input type="text" class="task-form__input" id="project-name" name="project-name">
+            <input type="text" class="task-form__input" id="project-name" name="projectName">
 
             <label for="budget" class="task-form__label">Budget:</label>
             <div class="task-form__currency-wrapper">
                 <input type="text" class="task-form__input task-form__input--amount" id="budget" name="budget">
-                <input type="text" class="task-form__input task-form__input--currency" list="currencyes" id="currency"
+                <input type="text" class="task-form__input task-form__input--currency" list="currencies" id="currency"
                        name="currency">
-                <datalist id="currencyes" name="currency">
+                <datalist id="currencies" name="currency">
                     <option value="$">
                     <option value="Rub">
                     <option value="Eur">
                 </datalist>
             </div>
-            <button class="button task-form__submit">Create</button>
+            <button class="button submit-button task-form__submit">Create</button>
         </form>
     </div>
 </template>
@@ -187,23 +191,23 @@
             <button class="button close-button form-header__close-button">X</button>
         </div>
         <form class="edit-task__form task-form">
-            <label for="company-name" class="task-form__label">Company Name:</label>
-            <input type="text" class="task-form__input" list="company-names" id="company-name" name="company-name">
-            <datalist id="company-names">
+            <label for="edit-company-name" class="task-form__label">Company Name:</label>
+            <input type="text" class="task-form__input" list="edit-company-names" id="edit-company-name" name="companyName">
+            <datalist id="edit-company-names">
                 <option value="Company 1">
                 <option value="Company 2">
                 <option value="Company 3">
             </datalist>
 
-            <label for="project-name" class="task-form__label">Project Name:</label>
-            <input type="text" class="task-form__input" id="project-name" name="project-name">
+            <label for="edit-project-name" class="task-form__label">Project Name:</label>
+            <input type="text" class="task-form__input" id="edit-project-name" name="projectName">
 
-            <label for="budget" class="task-form__label">Budget:</label>
+            <label for="edit-budget" class="task-form__label">Budget:</label>
             <div class="task-form__currency-wrapper">
-                <input type="text" class="task-form__input task-form__input--amount" id="budget" name="budget">
-                <input type="text" class="task-form__input task-form__input--currency" list="currencyes" id="currency"
+                <input type="text" class="task-form__input task-form__input--amount" id="edit-budget" name="budget">
+                <input type="text" class="task-form__input task-form__input--currency" list="edit-currencies" id="edit-currency"
                        name="currency">
-                <datalist id="currencyes" name="currency">
+                <datalist id="edit-currencies">
                     <option value="$">
                     <option value="Rub">
                     <option value="Eur">
@@ -211,19 +215,19 @@
             </div>
 
             <label for="today-time" class="task-form__label">Today time:</label>
-            <input type="text" class="task-form__input" id="today-time" name="today-time">
+            <input type="text" class="task-form__input" id="today-time" name="todayTime">
 
             <label for="started-at" class="task-form__label">Started at:</label>
-            <input type="text" class="task-form__input" id="started-at" name="started-at">
+            <input type="text" class="task-form__input" id="started-at" name="startedAt">
 
 
             <div class="edit-task__checkbox-wrapper">
                 <label for="is-closed" class="task-form__label">Closed:</label>
-                <input type="checkbox" class="task-form__input" id="is-closed" name="is-closed">
+                <input type="checkbox" class="task-form__input" id="is-closed" name="isClosed">
             </div>
-            <input type="text" class="task-form__input" id="closed-at" name="closed-at">
+            <input type="text" class="task-form__input" id="closed-at" name="closedAt">
 
-            <button class="button task-form__submit">Apply</button>
+            <button class="button submit-button task-form__submit">Apply</button>
         </form>
     </div>
 </template>
