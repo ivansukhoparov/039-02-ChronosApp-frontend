@@ -1,27 +1,27 @@
 import {app, errorPopup} from "../../../index.js";
 import {serverResponse} from "../../testData.js";
 import {Menu} from "../menu.js";
+import {BaseFormClass} from "./_baseFormClass.js";
+import {loginFormTemplate, registrationFormTemplate} from "../../templates.js";
 
-export class SignInForm {
-    #frame
-    #app
+export class SignInForm extends BaseFormClass {
 
-    constructor(app, template) {
-        this.#app = app
-        this.#frame = template.cloneNode(true)
+
+    constructor() {
+        super(loginFormTemplate, app)
     }
 
     createPopup() {
-        const submitButton = this.#frame.querySelector("#login-submit")
+        const submitButton = this._frame.querySelector("#login-submit")
         submitButton.addEventListener("click", (evt) => {
             evt.preventDefault();
             errorPopup.isErrorsHighlight()
-            const login = this.#frame.querySelector("#login-ot-email").value
-            const password = this.#frame.querySelector("#password").value
+            const login = this._frame.querySelector("#login-ot-email").value
+            const password = this._frame.querySelector("#password").value
 
             this.sendRequest(login, password)
         })
-        this.#app.render(this.#frame)
+        this. _app.render(this._frame)
     }
 
     sendRequest(login, password) {

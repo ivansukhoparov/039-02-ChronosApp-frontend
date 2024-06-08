@@ -14,15 +14,17 @@ export class StartScreen{
     }
 
     addEvents(){
+        const signInForm = new SignInForm()
+        const signUpForm = new SignUpForm()
         this.#frame.querySelector("#sign-in").addEventListener("click", (evt)=>{
             evt.preventDefault()
-            const loginPopup = new SignInForm(app, loginFormTemplate)
-            loginPopup.createPopup()
+
+            signInForm.showForm()
         })
         this.#frame.querySelector("#sign-up").addEventListener("click", (evt)=>{
             evt.preventDefault()
-            const registrationPopup = new SignUpForm()
-            registrationPopup.createPopup()
+
+            signUpForm.showForm()
         })
     }
 }
