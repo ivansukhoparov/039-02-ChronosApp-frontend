@@ -1,4 +1,6 @@
-import {errorPopup} from "../index.js";
+import {app, errorPopup} from "../index.js";
+import {serverResponse} from "./testData.js";
+import {Menu} from "./menu.js";
 
 export class LoginPopup {
     #frame
@@ -25,6 +27,9 @@ export class LoginPopup {
     sendRequest(login, password) {
         if (login === "qwe" && password === "qweasd") {
             console.log("access confirmed")
+            new Menu()
+            app.createTasksEntities(serverResponse)
+            app.renderTasks()
             return {token: "qweasdzxc"}
         } else {
             const testErrorsArray = [{field: "login", message: "not found"},
