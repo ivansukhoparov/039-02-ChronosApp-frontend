@@ -5,9 +5,11 @@ import {ErrorFrame} from "./js/components/error.js";
 
 import {SignUpForm} from "./js/components/forms/signUpForm.js";
 import {StartScreen} from "./js/components/start-screen.js";
+import {FetchAdapter} from "./js/fetchAdapter.js";
 
 
 export const app = new App(contentArea)
+export const fetchAdapter = new FetchAdapter()
 export const errorPopup = new ErrorFrame(app, errorMessagesTemplate)
 // const loginPopup = new LoginPopup(app, loginFormTemplate)
 // loginPopup.createPopup()
