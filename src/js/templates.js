@@ -1,5 +1,7 @@
 
 export const contentArea = document.querySelector("#content-area")
+
+export const startsScreenTemplate =  document.querySelector("#start-screen-template").content.querySelector(".start-screen")
 export const loginFormTemplate = document.querySelector("#login-form-template").content.querySelector(".login")
 export const registrationFormTemplate = document.querySelector("#registration-form-template").content.querySelector(".registration")
 export  const errorMessagesTemplate = document.querySelector("#error-template").content.querySelector(".error")

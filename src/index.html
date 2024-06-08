@@ -8,7 +8,21 @@
 
 </head>
 <body>
-<div class="content-area" id="content-area"></div>
+
+<div class="content-area" id="content-area">
+
+</div>
+
+<template id="start-screen-template">
+    <div class="start-screen">
+        <div>
+            <a href="#" id="sign-up">SignUp</a>
+            <a href="#" id="sign-in">SignIn</a>
+        </div>
+        <h1>Chatterer Chronos</h1>
+        <p>your best friend to manage your time in work</p>
+    </div>
+</template>
 
 <template id="menu-template">
     <div class="menu">
@@ -54,14 +68,15 @@
             <button class="button close-button form-header__close-button">X</button>
         </div>
         <form class="registration__form registration-form">
-            <label  for="registration-login"  class="registration-form__label">registration or e-mail:</label>
-            <input type="text"  class="registration-form__input"  id="registration-login" name="registration-login">
+            <label for="registration-login" class="registration-form__label">registration or e-mail:</label>
+            <input type="text" class="registration-form__input" id="registration-login" name="registration-login">
 
-            <label  for="registration-email"  class="registration-form__label">registration or e-mail:</label>
-            <input type="text"  class="registration-form__input"  id="registration-email" name="registration-email">
+            <label for="registration-email" class="registration-form__label">registration or e-mail:</label>
+            <input type="text" class="registration-form__input" id="registration-email" name="registration-email">
 
-            <label for="registration-password"  class="registration-form__label">Password:</label>
-            <input type="text" class=" registration-form__input"  id="registration-password" name="registration-password">
+            <label for="registration-password" class="registration-form__label">Password:</label>
+            <input type="text" class=" registration-form__input" id="registration-password"
+                   name="registration-password">
 
             <button class="button  registration-form__submit" id="registration-submit">registration</button>
         </form>
