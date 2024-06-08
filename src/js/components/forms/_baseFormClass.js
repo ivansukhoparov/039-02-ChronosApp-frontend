@@ -6,7 +6,6 @@ export class BaseFormClass {
         this._frame = formTemplate.cloneNode(true)
         this._app = app
         this.addCloseAction()
-        this.addSubmitAction()
     }
 
     addCloseAction() {
@@ -26,14 +25,6 @@ export class BaseFormClass {
             }
             return acc
         }, {})
-    }
-
-    addSubmitAction() {
-        this._frame.querySelector(".submit-button").addEventListener("click", (evt) => {
-                evt.preventDefault()
-                const formData = this.collectFormValues()
-            }
-        )
     }
 
     showForm() {
