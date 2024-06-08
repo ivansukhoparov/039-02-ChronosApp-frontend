@@ -1,6 +1,6 @@
-import {contentArea} from "./templates.js";
+import {contentArea} from "../templates.js";
 
-export class ErrorPopup {
+export class ErrorFrame {
     #frame
     #app
 

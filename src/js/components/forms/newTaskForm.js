@@ -1,5 +1,5 @@
-import {contentArea, newTaskFormTemplate} from "./templates.js";
-import {app} from "../index.js";
+import {contentArea, newTaskFormTemplate} from "../../templates.js";
+import {app} from "../../../index.js";
 
 export class NewTaskForm {
     #frame = newTaskFormTemplate.cloneNode(true)

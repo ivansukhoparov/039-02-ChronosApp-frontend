@@ -1,6 +1,6 @@
-import {app, errorPopup} from "../index.js";
-import {taskExtendedTemplate, taskPreviewTemplate} from "./templates.js";
-import {EditTaskForm} from "./editTaskForm.js";
+import {app, errorPopup} from "../../index.js";
+import {taskExtendedTemplate, taskPreviewTemplate} from "../templates.js";
+import {EditTaskForm} from "./forms/editTaskForm.js";
 
 
 export class Task {

@@ -1,7 +1,7 @@
-import {loginFormTemplate, startsScreenTemplate} from "./templates.js";
-import {app} from "../index.js";
-import {LoginPopup} from "./loginPopup.js";
-import {RegistrationPopup} from "./registrationPopup.js";
+import {loginFormTemplate, startsScreenTemplate} from "../templates.js";
+import {app} from "../../index.js";
+import {SignInForm} from "./forms/signInForm.js";
+import {SignUpForm} from "./forms/signUpForm.js";
 
 
 export class StartScreen{
@@ -16,12 +16,12 @@ export class StartScreen{
     addEvents(){
         this.#frame.querySelector("#sign-in").addEventListener("click", (evt)=>{
             evt.preventDefault()
-            const loginPopup = new LoginPopup(app, loginFormTemplate)
+            const loginPopup = new SignInForm(app, loginFormTemplate)
             loginPopup.createPopup()
         })
         this.#frame.querySelector("#sign-up").addEventListener("click", (evt)=>{
             evt.preventDefault()
-            const registrationPopup = new RegistrationPopup()
+            const registrationPopup = new SignUpForm()
             registrationPopup.createPopup()
         })
     }

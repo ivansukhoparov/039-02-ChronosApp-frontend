@@ -1,9 +1,9 @@
-import {app, errorPopup} from "../index.js";
-import {Menu} from "./menu.js";
-import {serverResponse} from "./testData.js";
-import {registrationFormTemplate} from "./templates.js";
+import {app, errorPopup} from "../../../index.js";
+import {Menu} from "../menu.js";
+import {serverResponse} from "../../testData.js";
+import {registrationFormTemplate} from "../../templates.js";
 
-export class RegistrationPopup {
+export class SignUpForm {
     #frame = registrationFormTemplate.cloneNode(true)
     #app = app
 

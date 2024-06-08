@@ -1,8 +1,8 @@
-import {app, errorPopup} from "../index.js";
-import {serverResponse} from "./testData.js";
-import {Menu} from "./menu.js";
+import {app, errorPopup} from "../../../index.js";
+import {serverResponse} from "../../testData.js";
+import {Menu} from "../menu.js";
 
-export class LoginPopup {
+export class SignInForm {
     #frame
     #app
 

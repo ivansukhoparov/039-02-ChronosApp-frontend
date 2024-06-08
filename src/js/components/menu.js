@@ -1,5 +1,5 @@
-import {menuTemplate} from "./templates.js";
-import {NewTaskForm} from "./newTaskForm.js";
+import {menuTemplate} from "../templates.js";
+import {NewTaskForm} from "./forms/newTaskForm.js";
 
 export class Menu {
     #frame = menuTemplate.cloneNode(true)

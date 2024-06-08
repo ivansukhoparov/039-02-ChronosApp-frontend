@@ -1,5 +1,5 @@
 import {contentArea} from "./templates.js";
-import {Task} from "./tasksFrame.js";
+import {Task} from "./components/task.js";
 
 export class App {
     tasks
