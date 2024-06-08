@@ -28,7 +28,7 @@ export class ErrorPopup {
             this.#app.contentArea.removeChild(this.#frame)
         })
 
-        this.#app.render(this.#frame, true)
+        this.#app.render(this.#frame, false)
     }
 
     function
