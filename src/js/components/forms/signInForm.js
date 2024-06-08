@@ -17,7 +17,6 @@ export class SignInForm extends BaseFormClass {
             errorPopup.isErrorsHighlight()
             const login = this._frame.querySelector("#login-ot-email").value
             const password = this._frame.querySelector("#password").value
-
             this.sendRequest(login, password)
         })
     }

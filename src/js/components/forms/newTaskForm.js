@@ -6,17 +6,17 @@ export class NewTaskForm extends BaseFormClass{
 
     constructor() {
         super(newTaskFormTemplate, app)
-        this.addEvents()
+        // this.addEvents()
 
     }
 
-    addEvents(){
-        const closeButton = this._frame.querySelector(".close-button")
-        closeButton.addEventListener("click", (evt) => {
-            evt.preventDefault()
-            this. _app.contentArea.removeChild(this._frame)
-        })
-    }
+    // addEvents(){
+    //     const closeButton = this._frame.querySelector(".close-button")
+    //     closeButton.addEventListener("click", (evt) => {
+    //         evt.preventDefault()
+    //         this. _app.contentArea.removeChild(this._frame)
+    //     })
+    // }
 
 
 
