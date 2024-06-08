@@ -3,8 +3,12 @@ import {App} from "./js/app.js";
 import {LoginPopup} from "./js/loginPopup.js";
 import {ErrorPopup} from "./js/errorPopup.js";
 
+import {RegistrationPopup} from "./js/registrationPopup.js";
 
-const app = new App(contentArea)
+
+export const app = new App(contentArea)
 export const errorPopup = new ErrorPopup(app, errorMessagesTemplate)
 const loginPopup = new LoginPopup(app, loginFormTemplate)
 loginPopup.createPopup()
+const registrationPopup = new RegistrationPopup()
+registrationPopup.createPopup()
