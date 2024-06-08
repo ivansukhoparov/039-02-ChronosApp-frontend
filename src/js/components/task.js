@@ -1,4 +1,4 @@
-import {app, errorPopup} from "../../index.js";
+import {app} from "../../index.js";
 import {taskExtendedTemplate, taskPreviewTemplate} from "../templates.js";
 import {EditTaskForm} from "./forms/editTaskForm.js";
 
@@ -61,7 +61,7 @@ export class Task {
         this.#framePreview.querySelector(".project-name").innerHTML = this.#task.projectName
         this.#framePreview.querySelector(".budget-info").innerHTML = this.#task.budget + " " + this.getCurrencySymbol(this.#task.currency)
 
-        if (this.#closedAt !== null) {
+        if (this.#task.isClosed) {
             this.#framePreview.classList.add("task--closed")
         }
     }
@@ -76,8 +76,9 @@ export class Task {
         this.#frameExtended.querySelector(".today-time-info").querySelector("span").innerHTML = this.#task.todayTime
         this.#frameExtended.querySelector(".started-date").querySelector("span").innerHTML = this.#task.startedAt
         this.#frameExtended.querySelector(".closed-date").querySelector("span").innerHTML = this.#task.closedAt
-
-
+        if (this.#task.isClosed) {
+            this.#frameExtended.classList.add("task--closed")
+        }
     }
 
     getFrame(isActive) {

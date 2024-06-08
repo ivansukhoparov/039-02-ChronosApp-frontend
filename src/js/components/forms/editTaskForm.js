@@ -1,14 +1,13 @@
-import {contentArea, editTaskFormTemplate, loginFormTemplate, newTaskFormTemplate} from "../../templates.js";
+import { editTaskFormTemplate,} from "../../templates.js";
 import {app} from "../../../index.js";
 import {BaseFormClass} from "./_baseFormClass.js";
 
-export class EditTaskForm extends BaseFormClass{
-
+export class EditTaskForm extends BaseFormClass {
 
 
     constructor(task) {
         super(editTaskFormTemplate, app)
-       this.fillForm(task)
+        this.fillForm(task)
         this.addEvents()
         this.showForm()
     }
@@ -32,15 +31,13 @@ export class EditTaskForm extends BaseFormClass{
     addEvents() {
         this._frame.querySelector(".close-button").addEventListener("click", (evt) => {
             evt.preventDefault()
-            this. _app.contentArea.removeChild(this._frame)
+            this._app.contentArea.removeChild(this._frame)
         })
 
-        this._frame.querySelector("#is-closed").addEventListener("change",()=>{
+        this._frame.querySelector("#is-closed").addEventListener("change", () => {
             this._frame.querySelector("#closed-at").disabled = !this._frame.querySelector("#is-closed").checked
         })
     }
-
-
 
 
 }

@@ -1,4 +1,4 @@
-import {loginFormTemplate, startsScreenTemplate} from "../templates.js";
+import { startsScreenTemplate} from "../templates.js";
 import {app} from "../../index.js";
 import {SignInForm} from "./forms/signInForm.js";
 import {SignUpForm} from "./forms/signUpForm.js";

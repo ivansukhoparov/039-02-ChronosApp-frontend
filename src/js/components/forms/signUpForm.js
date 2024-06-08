@@ -1,11 +1,8 @@
-import {app, errorPopup} from "../../../index.js";
-import {Menu} from "../menu.js";
-import {serverResponse} from "../../testData.js";
+import {app} from "../../../index.js";
 import {registrationFormTemplate} from "../../templates.js";
 import {BaseFormClass} from "./_baseFormClass.js";
 
 export class SignUpForm extends BaseFormClass{
-
 
 constructor() {
         super(registrationFormTemplate, app)

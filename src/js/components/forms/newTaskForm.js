@@ -1,4 +1,4 @@
-import {contentArea, editTaskFormTemplate, newTaskFormTemplate} from "../../templates.js";
+import { newTaskFormTemplate} from "../../templates.js";
 import {app} from "../../../index.js";
 import {BaseFormClass} from "./_baseFormClass.js";
 

@@ -8,7 +8,6 @@ export class Menu {
         this.showMenu()
         this.addEvents()
     }
-
     showMenu() {
         const            body = document.querySelector("body")
         body.appendChild(this.#frame)

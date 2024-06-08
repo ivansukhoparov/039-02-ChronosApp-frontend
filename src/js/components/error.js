@@ -9,7 +9,6 @@ export class ErrorFrame {
         this.#frame = template.cloneNode(true)
     }
 
-
     throwErrors(errors) {
 
         const errorTextTemplate = this.#frame.querySelector(".error__message")
@@ -30,8 +29,6 @@ export class ErrorFrame {
 
         this.#app.render(this.#frame, false)
     }
-
-    function
 
     isErrorsHighlight() {
         if (this.#app.contentArea.querySelector(".error") !== null) {

@@ -2,10 +2,9 @@ import {app, errorPopup} from "../../../index.js";
 import {serverResponse} from "../../testData.js";
 import {Menu} from "../menu.js";
 import {BaseFormClass} from "./_baseFormClass.js";
-import {loginFormTemplate, registrationFormTemplate} from "../../templates.js";
+import {loginFormTemplate} from "../../templates.js";
 
 export class SignInForm extends BaseFormClass {
-
 
     constructor() {
         super(loginFormTemplate, app)
@@ -21,7 +20,6 @@ export class SignInForm extends BaseFormClass {
 
             this.sendRequest(login, password)
         })
-
     }
 
     sendRequest(login, password) {
