@@ -1,27 +1,23 @@
-import {contentArea, newTaskFormTemplate} from "../../templates.js";
+import {contentArea, editTaskFormTemplate, newTaskFormTemplate} from "../../templates.js";
 import {app} from "../../../index.js";
+import {BaseFormClass} from "./_baseFormClass.js";
 
-export class NewTaskForm {
-    #frame = newTaskFormTemplate.cloneNode(true)
-    #app = app
+export class NewTaskForm extends BaseFormClass{
 
     constructor() {
+        super(newTaskFormTemplate, app)
         this.addEvents()
 
     }
 
     addEvents(){
-        const closeButton = this.#frame.querySelector(".close-button")
+        const closeButton = this._frame.querySelector(".close-button")
         closeButton.addEventListener("click", (evt) => {
             evt.preventDefault()
-            this.#app.contentArea.removeChild(this.#frame)
+            this. _app.contentArea.removeChild(this._frame)
         })
     }
 
-
-    showForm() {
-        this.#app.render(this.#frame, false)
-    }
 
 
 

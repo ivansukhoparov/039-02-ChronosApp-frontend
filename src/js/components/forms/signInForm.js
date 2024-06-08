@@ -9,11 +9,11 @@ export class SignInForm extends BaseFormClass {
 
     constructor() {
         super(loginFormTemplate, app)
+        this.addEvents()
     }
 
-    createPopup() {
-        const submitButton = this._frame.querySelector("#login-submit")
-        submitButton.addEventListener("click", (evt) => {
+    addEvents() {
+        this._frame.querySelector("#login-submit").addEventListener("click", (evt) => {
             evt.preventDefault();
             errorPopup.isErrorsHighlight()
             const login = this._frame.querySelector("#login-ot-email").value
@@ -21,7 +21,7 @@ export class SignInForm extends BaseFormClass {
 
             this.sendRequest(login, password)
         })
-        this. _app.render(this._frame)
+
     }
 
     sendRequest(login, password) {
